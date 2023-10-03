@@ -22,9 +22,9 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
 
 ### Checking any repo on your cluster
-
+```bash
 helm repo ls
-
+```
 ### Add the remote repo to your cluster.
 ```bash
 helm repo add <your_repo> https://raw.githubusercontent.com/Golge/phonebook-repo/main 
