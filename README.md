@@ -26,9 +26,12 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 helm repo ls
 
 ### Add the remote repo to your cluster.
-helm repo add <your_repo> https://raw.githubusercontent.com/Golge/phonebook-repo/main
+```bash
+helm repo add <your_repo> https://raw.githubusercontent.com/Golge/phonebook-repo/main 
+```
 
 ### Final step to make the repo run! 
 
+```bash 
 helm install <your_app_name> <your_repo>/phonebook-chart
 ```
