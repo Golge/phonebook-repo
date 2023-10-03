@@ -9,9 +9,26 @@ helm status phonebook-chart
 To use own images execute as below:
 
 ## Deployment
+To deploy the Helm repo you need to install helm on your cluster
 
-Run this command to install the chart
+### Install HELM
+Website:
+```https://helm.sh/docs/intro/install/```
 
-```bash
-helm upgrade --install myapp phonebook-repo/phonebook-chart --set webserver_image=<image-name> --set resultserver_image=<image-name>  
+Run the bash command below
+
+```bash 
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash 
+```
+
+### Checking any repo on your cluster
+
+helm repo ls
+
+### Add the remote repo to your cluster.
+helm repo add <your_repo> https://raw.githubusercontent.com/Golge/phonebook-repo/main
+
+### Final step to make the repo run! 
+
+helm install <your_app_name> <your_repo>/phonebook-chart
 ```
